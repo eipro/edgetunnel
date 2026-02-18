@@ -1,6 +1,6 @@
 MAX_CONCURRENT_THREADS = 1000
 REQUEST_TIMEOUT = 3
-CUSTOM_NAME = "Sole"
+CUSTOM_NAME = "CleanIp"
 import sys
 import requests
 import ipaddress
