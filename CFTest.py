@@ -1,6 +1,6 @@
 MAX_CONCURRENT_THREADS = 1000
 REQUEST_TIMEOUT = 3
-
+CUSTOM_NAME = "Sole"
 import sys
 import requests
 import ipaddress
@@ -168,11 +168,11 @@ def main():
             for colo in sorted(colo_groups.keys()):
                 ips = colo_groups[colo]
                 for idx, ip in enumerate(ips, 1):
-                    f.write(f"{ip}#{colo} {idx}\n")
+                    f.write(f"{ip}#{CUSTOM_NAME} {idx}\n")
         else:
             # 不指定-d时使用"IP#优选IP 序号"格式
             for idx, (ip, _) in enumerate(matched_results, 1):
-                f.write(f"{ip}#优选IP {idx}\n")
+                f.write(f"{ip}#{CUSTOM_NAME} {idx}\n")
     
     print(f"完成！共找到 {len(matched_results)} 个{search_mode}，已保存到 {output_file}")
 
